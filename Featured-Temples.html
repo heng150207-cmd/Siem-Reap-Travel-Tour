@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Temples — Siem Reap</title>
+
+    <!-- Fonts: Cinzel for carved-stone display, Work Sans for clean body copy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind (CDN build for preview — swap for your compiled ../src/output.css in production) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/theme.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            50: '#F7F1E3',
+                            100: '#F1E7D2',
+                            200: '#E4D5B3',
+                        },
+                        jungle: {
+                            700: '#243A2E',
+                            800: '#1C2E24',
+                            900: '#15221B',
+                        },
+                        gold: {
+                            400: '#C9A758',
+                            500: '#B08D46',
+                            600: '#8F7238',
+                        },
+                        charcoal: '#2B2925',
+                    },
+                    fontFamily: {
+                        display: ['Cinzel', 'serif'],
+                        body: ['"Work Sans"', 'sans-serif'],
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(18px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '0% 50%' },
+                            '100%': { backgroundPosition: '200% 50%' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.9s cubic-bezier(0.22,1,0.36,1) both',
+                        shimmer: 'shimmer 3.5s linear infinite',
+                        marquee: 'marquee 22s linear infinite',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-stone-50 font-body antialiased">
+    <button type="button" data-theme-toggle aria-label="Toggle theme"
+        class="fixed top-4 right-4 z-50 w-10 h-10 rounded-full border border-stone-300 bg-white/80 backdrop-blur text-jungle-900 hover:bg-stone-100 transition">
+        <span data-theme-icon aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+            </svg>
+        </span>
+    </button>
+
+    <!-- Featured Temples -->
+    <section class="bg-stone-50 pt-24 pb-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Header -->
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <p
+                    class="animate-fade-in-up [animation-delay:0ms] text-xs tracking-[0.3em] uppercase text-gold-600 mb-3">
+                    Siem Reap · Cambodia
+                </p>
+
+                <h2 class="animate-fade-in-up [animation-delay:150ms] font-display text-4xl md:text-5xl font-semibold mb-6
+                           bg-gradient-to-r from-jungle-900 via-gold-500 to-jungle-900 bg-[length:200%_auto]
+                           bg-clip-text text-transparent animate-shimmer">
+                    Featured Temples
+                </h2>
+
+                <!-- Signature motif divider -->
+                <div class="animate-fade-in-up [animation-delay:300ms] flex items-center justify-center gap-4 mb-6">
+                    <span
+                        class="h-px flex-1 max-w-32 bg-gradient-to-r from-transparent via-gold-500 to-transparent"></span>
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" class="shrink-0">
+                        <path d="M14 2 L18 10 L26 10 L19.5 15.5 L22 24 L14 19 L6 24 L8.5 15.5 L2 10 L10 10 Z"
+                            stroke="#B08D46" stroke-width="1.2" fill="none" />
+                    </svg>
+                    <span
+                        class="h-px flex-1 max-w-32 bg-gradient-to-r from-transparent via-gold-500 to-transparent"></span>
+                </div>
+
+                <p class="animate-fade-in-up [animation-delay:450ms] text-charcoal/70 leading-relaxed">
+                    Six landmarks of the Angkor era, each carved from sandstone and centuries of history.
+                </p>
+            </div>
+        </div>
+
+        <!-- Running text ticker (signature element) -->
+        <div
+            class="animate-fade-in-up [animation-delay:500ms] border-y border-gold-500/30 bg-jungle-900 py-3 mb-16 overflow-hidden">
+            <div class="flex w-max animate-marquee">
+                <div class="flex items-center shrink-0">
+                    <!-- repeated twice back to back for a seamless loop -->
+                    <span
+                        class="flex items-center gap-3 px-4 text-sm tracking-[0.25em] uppercase text-gold-400/90 font-medium whitespace-nowrap">
+                        <span>Banteay Srei</span><span class="text-gold-500/50">✦</span>
+                        <span>Ta Prohm</span><span class="text-gold-500/50">✦</span>
+                        <span>Neak Pean</span><span class="text-gold-500/50">✦</span>
+                        <span>Pre Rup</span><span class="text-gold-500/50">✦</span>
+                        <span>Preah Khan</span><span class="text-gold-500/50">✦</span>
+                        <span>Baphuon</span><span class="text-gold-500/50">✦</span>
+                    </span>
+                    <span
+                        class="flex items-center gap-3 px-4 text-sm tracking-[0.25em] uppercase text-gold-400/90 font-medium whitespace-nowrap">
+                        <span>Banteay Srei</span><span class="text-gold-500/50">✦</span>
+                        <span>Ta Prohm</span><span class="text-gold-500/50">✦</span>
+                        <span>Neak Pean</span><span class="text-gold-500/50">✦</span>
+                        <span>Pre Rup</span><span class="text-gold-500/50">✦</span>
+                        <span>Preah Khan</span><span class="text-gold-500/50">✦</span>
+                        <span>Baphuon</span><span class="text-gold-500/50">✦</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Cards -->
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Card 1 -->
+                <article class="group animate-fade-in-up [animation-delay:100ms] flex flex-col bg-white border border-stone-200 rounded-2xl
+                                 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl
+                                 motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+                    <div class="overflow-hidden rounded-t-2xl">
+                        <img class="h-56 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                            src="./image/bts.png" alt="Banteay Srei Temple">
+                    </div>
+                    <div class="p-6 flex flex-col grow">
+                        <h3 class="font-display text-lg font-semibold text-jungle-900 mb-2">
+                            Banteay Srei Temple
+                        </h3>
+                        <p class="text-sm text-charcoal/70 leading-relaxed mb-5 grow">
+                            A pink sandstone temple famed for its intricate, jewel-like carvings.
+                        </p>
+                        <button type="button"
+                            class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-jungle-800 text-stone-50 text-sm font-medium
+                                   transition-all duration-300 hover:bg-gold-500 hover:text-jungle-900 hover:-translate-y-0.5 hover:shadow-lg
+                                   focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-500 focus-visible:outline-offset-2">
+                            Explore Temple
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="group animate-fade-in-up [animation-delay:200ms] flex flex-col bg-white border border-stone-200 rounded-2xl
+                                 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl
+                                 motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+                    <div class="overflow-hidden rounded-t-2xl">
+                        <img class="h-56 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                            src="./image/tp.png" alt="Ta Prohm Temple">
+                    </div>
+                    <div class="p-6 flex flex-col grow">
+                        <h3 class="font-display text-lg font-semibold text-jungle-900 mb-2">
+                            Ta Prohm Temple
+                        </h3>
+                        <p class="text-sm text-charcoal/70 leading-relaxed mb-5 grow">
+                            Giant strangler-fig roots wind through the ruins, jungle reclaiming stone.
+                        </p>
+                        <button type="button"
+                            class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-jungle-800 text-stone-50 text-sm font-medium
+                                   transition-all duration-300 hover:bg-gold-500 hover:text-jungle-900 hover:-translate-y-0.5 hover:shadow-lg
+                                   focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-500 focus-visible:outline-offset-2">
+                            Explore Temple
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="group animate-fade-in-up [animation-delay:300ms] flex flex-col bg-white border border-stone-200 rounded-2xl
+                                 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl
+                                 motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+                    <div class="overflow-hidden rounded-t-2xl">
+                        <img class="h-56 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                            src="./image/np.png" alt="Neak Pean Temple">
+                    </div>
+                    <div class="p-6 flex flex-col grow">
+                        <h3 class="font-display text-lg font-semibold text-jungle-900 mb-2">
+                            Neak Pean Temple
+                        </h3>
+                        <p class="text-sm text-charcoal/70 leading-relaxed mb-5 grow">
+                            A small island sanctuary set in still, mirror-calm waters.
+                        </p>
+                        <button type="button"
+                            class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-jungle-800 text-stone-50 text-sm font-medium
+                                   transition-all duration-300 hover:bg-gold-500 hover:text-jungle-900 hover:-translate-y-0.5 hover:shadow-lg
+                                   focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-500 focus-visible:outline-offset-2">
+                            Explore Temple
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="group animate-fade-in-up [animation-delay:400ms] flex flex-col bg-white border border-stone-200 rounded-2xl
+                                 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl
+                                 motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+                    <div class="overflow-hidden rounded-t-2xl">
+                        <img class="h-56 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                            src="./image/pr.png" alt="Pre Rup Temple">
+                    </div>
+                    <div class="p-6 flex flex-col grow">
+                        <h3 class="font-display text-lg font-semibold text-jungle-900 mb-2">
+                            Pre Rup Temple
+                        </h3>
+                        <p class="text-sm text-charcoal/70 leading-relaxed mb-5 grow">
+                            Best known for its brick towers glowing at sunset.
+                        </p>
+                        <button type="button"
+                            class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-jungle-800 text-stone-50 text-sm font-medium
+                                   transition-all duration-300 hover:bg-gold-500 hover:text-jungle-900 hover:-translate-y-0.5 hover:shadow-lg
+                                   focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-500 focus-visible:outline-offset-2">
+                            Explore Temple
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="group animate-fade-in-up [animation-delay:500ms] flex flex-col bg-white border border-stone-200 rounded-2xl
+                                 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl
+                                 motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+                    <div class="overflow-hidden rounded-t-2xl">
+                        <img class="h-56 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                            src="./image/pk.png" alt="Preah Khan Temple">
+                    </div>
+                    <div class="p-6 flex flex-col grow">
+                        <h3 class="font-display text-lg font-semibold text-jungle-900 mb-2">
+                            Preah Khan Temple
+                        </h3>
+                        <p class="text-sm text-charcoal/70 leading-relaxed mb-5 grow">
+                            One of Angkor's largest temple complexes near Siem Reap.
+                        </p>
+                        <button type="button"
+                            class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-jungle-800 text-stone-50 text-sm font-medium
+                                   transition-all duration-300 hover:bg-gold-500 hover:text-jungle-900 hover:-translate-y-0.5 hover:shadow-lg
+                                   focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-500 focus-visible:outline-offset-2">
+                            Explore Temple
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="group animate-fade-in-up [animation-delay:600ms] flex flex-col bg-white border border-stone-200 rounded-2xl
+                                 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl
+                                 motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+                    <div class="overflow-hidden rounded-t-2xl">
+                        <img class="h-56 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                            src="./image/bp.png" alt="Baphuon Temple">
+                    </div>
+                    <div class="p-6 flex flex-col grow">
+                        <h3 class="font-display text-lg font-semibold text-jungle-900 mb-2">
+                            Baphuon Temple
+                        </h3>
+                        <p class="text-sm text-charcoal/70 leading-relaxed mb-5 grow">
+                            A monumental temple-mountain from the height of the Angkor period.
+                        </p>
+                        <button type="button"
+                            class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-jungle-800 text-stone-50 text-sm font-medium
+                                   transition-all duration-300 hover:bg-gold-500 hover:text-jungle-900 hover:-translate-y-0.5 hover:shadow-lg
+                                   focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-500 focus-visible:outline-offset-2">
+                            Explore Temple
+                            <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="py-24 bg-jungle-900 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <p
+                    class="animate-fade-in-up [animation-delay:0ms] text-xs tracking-[0.3em] uppercase text-gold-400 mb-3">
+                    Find your way
+                </p>
+                <h2
+                    class="animate-fade-in-up [animation-delay:150ms] font-display text-3xl md:text-4xl font-semibold text-stone-50">
+                    Our Local Map
+                </h2>
+                <div class="animate-fade-in-up [animation-delay:300ms] mt-5 flex justify-center">
+                    <span class="h-px w-24 bg-gold-500/60"></span>
+                </div>
+            </div>
+
+            <div
+                class="animate-fade-in-up [animation-delay:400ms] rounded-2xl shadow-2xl overflow-hidden border border-gold-500/20">
+                <img class="w-full h-[500px] object-cover" src="./image/map.png" alt="Map of temple locations"
+                    loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <script src="./src/theme.js"></script>
+</body>
+
+</html>
